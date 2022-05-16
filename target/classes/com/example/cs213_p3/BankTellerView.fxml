@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="523.0" prefWidth="629.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cs213_p3.BankTellerController">
+   <children>
+      <Button layoutX="497.0" layoutY="464.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Quit" />
+      <Button fx:id="displayTypeButton" layoutX="400.0" layoutY="464.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Display Type" />
+      <Button fx:id="updateDatabaseButton" layoutX="158.0" layoutY="464.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Update Database" />
+      <Button fx:id="displayInterestButton" layoutX="287.0" layoutY="464.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Display Interest" />
+      <Button fx:id="displayButton" layoutX="86.0" layoutY="464.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Display" />
+      <Label fx:id="directionsLabel1" layoutX="254.0" layoutY="22.0" text="Bank Teller Terminal" />
+      <RadioButton fx:id="checkingField1" layoutX="31.0" layoutY="186.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Checking">
+         <toggleGroup>
+            <ToggleGroup fx:id="accountType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="collegeCheckingField1" layoutX="31.0" layoutY="210.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="College Checking" toggleGroup="$accountType" />
+      <RadioButton fx:id="savingsField1" layoutX="32.0" layoutY="233.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Savings" toggleGroup="$accountType" />
+      <RadioButton fx:id="moneyMarketField1" layoutX="31.0" layoutY="259.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Money Market" toggleGroup="$accountType" />
+      <RadioButton fx:id="newarkRB1" layoutX="179.0" layoutY="110.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Newark">
+         <toggleGroup>
+            <ToggleGroup fx:id="campusCode" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="newBrunswickRB1" layoutX="179.0" layoutY="83.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="New Brunswick" toggleGroup="$campusCode" />
+      <RadioButton fx:id="loyalRB1" layoutX="312.0" layoutY="79.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Loyal">
+         <toggleGroup>
+            <ToggleGroup fx:id="loyalty" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="notLoyalRB1" layoutX="312.0" layoutY="104.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Not Loyal" toggleGroup="$loyalty" />
+      <RadioButton fx:id="camdenRB1" layoutX="179.0" layoutY="140.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Camden" toggleGroup="$campusCode" />
+      <Label layoutX="193.0" layoutY="54.0" text="Campus Code" />
+      <Label layoutX="308.0" layoutY="58.0" text="Savings Loyalty" />
+      <Label layoutX="31.0" layoutY="156.0" text="Account Type" />
+      <TextField fx:id="fnameField" layoutX="166.0" layoutY="190.0" />
+      <TextField fx:id="lnameField" layoutX="166.0" layoutY="249.0" />
+      <TextField fx:id="dobField" layoutX="335.0" layoutY="190.0" />
+      <Label fx:id="fnameLabel" disable="true" layoutX="164.0" layoutY="164.0" text="First Name" />
+      <Label fx:id="lnameLabel" disable="true" layoutX="165.0" layoutY="225.0" text="Last Name" />
+      <Label fx:id="dobLabel" disable="true" layoutX="335.0" layoutY="164.0" text="Date of Birth" />
+      <Label fx:id="depositLabel" layoutX="480.0" layoutY="37.0" text="Deposit Amount" />
+      <Label fx:id="withdrawLabel" layoutX="475.0" layoutY="103.0" text="Withdraw Amount" />
+      <TextField fx:id="depositField" layoutX="467.0" layoutY="65.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextField fx:id="withdrawField" layoutX="470.0" layoutY="127.0" prefHeight="25.0" prefWidth="113.0" />
+      <TextArea fx:id="printArea" layoutX="58.0" layoutY="288.0" prefHeight="152.0" prefWidth="514.0" />
+      <Label layoutX="58.0" layoutY="22.0" text="Action" />
+      <RadioButton layoutX="32.0" layoutY="45.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Open">
+         <toggleGroup>
+            <ToggleGroup fx:id="action" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton layoutX="32.0" layoutY="71.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Close" toggleGroup="$action" />
+      <RadioButton layoutX="32.0" layoutY="96.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Deposit" toggleGroup="$action" />
+      <RadioButton layoutX="32.0" layoutY="119.0" mnemonicParsing="false" onAction="#anyRadioButtonClickTerminal" text="Withdraw" toggleGroup="$action" />
+      <Button layoutX="458.0" layoutY="249.0" mnemonicParsing="false" onAction="#anyButtonClickTerminal" text="Submit" />
+   </children>
+</AnchorPane>
